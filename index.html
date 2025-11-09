@@ -1,13 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devi Vardhalaya</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devi Vardhayala Dance School</title>
   <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
-  <h1 class="text-white text-3xl font-bold">This is under development</h1>
-</body>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8b0000',
+            accent: '#e7c27d',
+            secondary: '#1a1a1a',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { animation: fadeIn 1.5s ease-in-out forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 1.2s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .active-link { border-bottom-color: #e7c27d !important; }
+    .scale-up { transition: transform 0.6s ease, box-shadow 0.6s ease; }
+    .scale-up:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(231, 194, 125, 0.4); }
 
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+  </style>
+</head>
+<body class="bg-secondary text-white overflow-y-scroll h-screen snap-mandatory snap-y font-serif" onload="startCarousel();">
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-transparent text-white py-4 backdrop-blur-md">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <a href="#" class="flex items-center space-x-2 text-xl font-bold hover:scale-105 transition-transform">
+        <img src="dv.logopng.png" alt="Logo" class="h-10 w-10 rounded-full border border-accent shadow-lg">
+        <span id="logo-text" class="text-accent">Devi Vardhayala</span>
+      </a>
+      <button id="menu-toggle" class="lg:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <ul id="menu" class="hidden lg:flex lg:space-x-8 text-lg">
+        <li><a href="#carousel" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Home</a></li>
+        <li><a href="#Aboutus" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">About Us</a></li>
+        <li><a href="#programs" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Programs</a></li>
+        <li><a href="#gallery" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Gallery</a></li>
+        <li><a href="#contact" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="carousel" class="relative w-full h-screen overflow-hidden snap-start">
+    <div id="carousel-container" class="relative w-full h-full">
+      <div class="slide absolute inset-0 flex items-center justify-center text-center bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('Hero1.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
+        <div class="relative z-10 px-4 fade-in animate-bounce-in">
+          <h1 class="text-5xl md:text-6xl font-extrabold tracking-wide">Embrace the <span class="text-accent">Grace</span> of Bharatanatyam</h1>
+          <p class="mt-6 text-xl text-gray-200 italic">Join Devi Vardhayala — where tradition meets expression.</p>
+        </div>
+      </div>
+      <div class="slide absolute inset-0 flex items-center justify-center text-center bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('/images/dance2.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
+        <div class="relative z-10 px-4 fade-in animate-fade-up">
+          <h1 class="text-5xl md:text-6xl font-extrabold tracking-wide">Preserving <span class="text-accent">Tradition</span></h1>
+          <p class="mt-6 text-xl text-gray-200 italic">The art of storytelling through rhythm and devotion.</p>
+        </div>
+      </div>
+      <div class="slide absolute inset-0 flex items-center justify-center text-center bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('/images/dance3.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
+        <div class="relative z-10 px-4 fade-in animate-fade-up">
+          <h1 class="text-5xl md:text-6xl font-extrabold tracking-wide">Nurturing <span class="text-accent">Talent</span></h1>
+          <p class="mt-6 text-xl text-gray-200 italic">Inspiring dancers of all ages to express their inner rhythm.</p>
+        </div>
+      </div>
+    </div>
+    <button class="absolute left-5 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-accent hover:text-black transition-all duration-300 p-4 rounded-full shadow-lg" onclick="prevSlide()">❮</button>
+    <button class="absolute right-5 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-accent hover:text-black transition-all duration-300 p-4 rounded-full shadow-lg" onclick="nextSlide()">❯</button>
+  </section>
+
+  <section id="Aboutus" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-[#f9f3e9] to-white text-black snap-start">
+    <div class="max-w-4xl text-center px-8 reveal">
+      <h1 class="text-5xl font-bold text-primary mb-6 tracking-wide animate-fade-in">Our Legacy</h1>
+      <p class="text-lg leading-relaxed text-gray-700">Founded by <span class="font-semibold text-primary">Guru Devi Vardhayala</span>, our institution embodies the essence of Bharatanatyam, blending discipline with devotion. We guide each student on a journey through rhythm, expression, and the beauty of storytelling through dance.</p>
+    </div>
+  </section>
+
+  <section id="programs" class="min-h-screen bg-secondary text-white py-24 px-6 snap-start">
+    <div class="max-w-7xl mx-auto text-center reveal">
+      <h1 class="text-5xl font-extrabold tracking-tight text-accent drop-shadow-lg">Our <span class="text-white">Programs</span></h1>
+      <p class="mt-4 text-lg text-gray-300">Experience graceful learning through our curated dance programs.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+      <div class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-gray-800 to-black border border-accent/30 scale-up p-6 reveal">
+        <img src="/images/beginner.jpg" class="w-full h-64 object-cover rounded-xl mb-4 shadow-md" alt="">
+        <h3 class="text-2xl font-bold text-accent mb-2">Beginner’s Course</h3>
+        <p class="text-gray-300">Master the foundation — posture, mudras, and rhythm — with structured guidance.</p>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-gray-800 to-black border border-accent/30 scale-up p-6 reveal">
+        <img src="/images/intermediate.jpg" class="w-full h-64 object-cover rounded-xl mb-4 shadow-md" alt="">
+        <h3 class="text-2xl font-bold text-accent mb-2">Intermediate Batch</h3>
+        <p class="text-gray-300">Refine adavus, improve precision, and explore expressive storytelling.</p>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-gray-800 to-black border border-accent/30 scale-up p-6 reveal">
+        <img src="/images/performance.jpg" class="w-full h-64 object-cover rounded-xl mb-4 shadow-md" alt="">
+        <h3 class="text-2xl font-bold text-accent mb-2">Stage Performances</h3>
+        <p class="text-gray-300">Perform in events and express your talent through live cultural showcases.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-black py-24 px-6 text-white">
+  <div class="text-center mb-12">
+    <h1 class="text-5xl font-bold text-accent mb-3">Gallery</h1>
+    <p class="text-gray-400 italic">A cinematic journey through rhythm, devotion, and art</p>
+  </div>
+
+  <!-- Row 1: Featured Performances -->
+  <div class="mb-14">
+    <h2 class="text-2xl font-semibold mb-4 text-accent">Featured Performances</h2>
+    <div class="relative group">
+      <div id="row1" class="flex space-x-6 overflow-x-auto scroll-smooth scrollbar-hide">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 1">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 2">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 3">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 4">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 1">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 2">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 3">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 4">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 1">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 2">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 3">
+        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 4">
+      </div>
+     <button onclick="scrollRow('row1', 'prev')" 
+  class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
+  ❮
+</button>
+
+<button onclick="scrollRow('row1', 'next')" 
+  class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
+  ❯
+</button>
+    </div>
+  </div>
+
+  <!-- Row 2: Cultural Workshops -->
+  <div class="mb-14">
+    <h2 class="text-2xl font-semibold mb-4 text-accent">Cultural Workshops</h2>
+    <div class="relative group">
+      <div id="row2" class="flex space-x-6 overflow-x-auto scroll-smooth scrollbar-hide">
+        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Workshop 1">
+        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Workshop 2">
+        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Workshop 3">
+        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Workshop 4">
+      </div>
+      <button onclick="scrollRow('row1', 'prev')" 
+  class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
+  ❮
+</button>
+
+<button onclick="scrollRow('row1', 'next')" 
+  class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
+  ❯
+</button>
+    </div>
+  </div>
+
+  <!-- Row 3: Student Highlights -->
+  <div class="mb-14">
+    <h2 class="text-2xl font-semibold mb-4 text-accent">Student Highlights</h2>
+    <div class="relative group">
+      <div id="row3" class="flex space-x-6 overflow-x-auto scroll-smooth scrollbar-hide">
+        <img src="Hero1.jpg" class="gallery-item w-64 h-40 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Student 1">
+        <img src="Hero1.jpg" class="gallery-item w-64 h-40 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Student 2">
+        <img src="Hero1.jpg" class="gallery-item w-64 h-40 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Student 3">
+        <img src="Hero1.jpg" class="gallery-item w-64 h-40 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Student 4">
+      </div>
+      <button onclick="scrollRow('row1', 'prev')" 
+  class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
+  ❮
+</button>
+
+<button onclick="scrollRow('row1', 'next')" 
+  class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
+  ❯
+</button>
+    </div>
+  </div>
+
+  <!-- Row 4: Behind The Scenes -->
+  <div>
+    <h2 class="text-2xl font-semibold mb-4 text-accent">Behind The Scenes</h2>
+    <div class="relative group">
+      <div id="row4" class="flex space-x-6 overflow-x-auto scroll-smooth scrollbar-hide">
+        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Behind 1">
+        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Behind 2">
+        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Behind 3">
+        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Behind 4">
+      </div>
+      <button onclick="scrollRow('row1', 'prev')" 
+  class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
+  ❮
+</button>
+
+<button onclick="scrollRow('row1', 'next')" 
+  class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
+  ❯
+</button>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact" class="h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#f9f3e9] to-white text-black snap-start">
+    <div class="text-center reveal">
+      <h1 class="text-4xl font-bold text-primary mb-4">Contact Us</h1>
+      <p class="mb-2 text-lg">📞 +91 98765 43210</p>
+      <p class="mb-4 text-lg">📧 devidance@gmail.com</p>
+      <a href="https://instagram.com/devidance" class="text-primary font-semibold underline hover:text-accent transition">Follow us on Instagram</a>
+
+
+      <div class="flex flex-col items-center space-y-4 mt-8">
+  <div class="text-2xl font-semibold text-primary">Our Online Presence</div>
+  <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
+    <div>
+      <span id="yt-count" class="text-4xl text-accent font-bold">0</span>
+      <p class="text-gray-700 font-medium mt-1">YouTube Subscribers</p>
+    </div>
+    <div>
+      <span id="ig-count" class="text-4xl text-accent font-bold">0</span>
+      <p class="text-gray-700 font-medium mt-1">Instagram Followers</p>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </section>
+
+  <script>
+    function handleScroll() {
+      const navbar = document.getElementById('navbar');
+      const links = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('section');
+
+      if (window.scrollY > 100) {
+        navbar.classList.remove('bg-transparent', 'text-white');
+        navbar.classList.add('bg-black/40', 'text-accent', 'backdrop-blur-lg');
+      } else {
+        navbar.classList.add('bg-transparent', 'text-white');
+        navbar.classList.remove('bg-black/40', 'text-accent');
+      }
+
+      let currentSection = '';
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      links.forEach((link) => {
+        const href = link.getAttribute('href').replace('#', '');
+        link.classList.remove('active-link');
+        if (href === currentSection) {
+          link.classList.add('active-link');
+        }
+      });
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function updateCarousel() {
+      slides.forEach((s, i) => {
+        s.classList.toggle('opacity-100', i === currentIndex);
+        s.classList.toggle('opacity-0', i !== currentIndex);
+      });
+    }
+
+    function nextSlide() { currentIndex = (currentIndex + 1) % totalSlides; updateCarousel(); }
+    function prevSlide() { currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; updateCarousel(); }
+
+    function startCarousel() {
+      slides[0].classList.add('opacity-100');
+      setInterval(nextSlide, 5000);
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+  function scrollRow(rowId, direction) {
+    const row = document.getElementById(rowId);
+    const cardWidth = row.querySelector('.gallery-item').offsetWidth + 24; // 24px = gap
+    const visibleCards = Math.floor(row.offsetWidth / cardWidth);
+    const scrollAmount = cardWidth * visibleCards; // scroll by visible width
+
+    row.scrollBy({
+      left: direction === 'next' ? scrollAmount : -scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+
+    
+
+  </script>
+</body>
 </html>
