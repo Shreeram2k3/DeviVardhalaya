@@ -1,3 +1,25 @@
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+    menu.classList.toggle("flex");
+    menu.classList.toggle("flex-col"); // makes vertical on mobile
+    menu.classList.toggle("absolute");
+    menu.classList.toggle("top-16");
+    menu.classList.toggle("left-0");
+    menu.classList.toggle("bg-black/90");
+    menu.classList.toggle("w-full");
+    menu.classList.toggle("p-4");
+    menu.classList.toggle("space-y-4");
+  });
+});
+
+
+
+
 function handleScroll() {
       const navbar = document.getElementById('navbar');
       const links = document.querySelectorAll('.nav-link');

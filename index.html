@@ -25,26 +25,88 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body class="bg-secondary text-white overflow-y-scroll h-screen snap-mandatory snap-y font-serif" onload="startCarousel();">
-  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-transparent text-white py-4 backdrop-blur-md">
-    <div class="container mx-auto px-6 flex justify-between items-center">
-      <a href="#" class="flex items-center space-x-2 text-xl font-bold hover:scale-105 transition-transform">
-        <img src="dv.logopng.png" alt="Logo" class="h-20 w-20 ">
-        <span id="logo-text" class="text-accent">Devi Varadhayala</span>
-      </a>
-      <button id="menu-toggle" class="lg:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-      <ul id="menu" class="hidden lg:flex lg:space-x-8 text-lg">
-        <li><a href="#carousel" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Home</a></li>
-        <li><a href="#Aboutus" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">About Us</a></li>
-        <li><a href="#programs" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Programs</a></li>
-        <li><a href="#gallery" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Gallery</a></li>
-        <li><a href="#contact" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-black/30 backdrop-blur-md text-white py-3">
+  <div class="container mx-auto px-6 flex justify-between items-center">
+    
+    <!-- Logo -->
+    <a href="#" class="flex items-center space-x-2 text-xl font-bold hover:scale-105 transition-transform">
+      <img src="dv.logopng.png" alt="Logo" class="h-14 w-14">
+      <span id="logo-text" class="text-accent">Devi Varadhayala</span>
+    </a>
+
+    <!-- Toggle Button -->
+    <button id="menu-toggle" class="lg:hidden focus:outline-none transition-transform active:scale-90">
+      <!-- Hamburger Icon -->
+      <svg id="hamburger-icon" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+      <!-- X Icon -->
+      <svg id="close-icon" class="hidden w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Desktop Menu -->
+    <ul id="menu" class="hidden lg:flex lg:space-x-8 text-lg">
+      <li><a href="#carousel" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Home</a></li>
+      <li><a href="#Aboutus" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">About Us</a></li>
+      <li><a href="#programs" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Programs</a></li>
+      <li><a href="#gallery" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Gallery</a></li>
+      <li><a href="#contact" class="nav-link pb-1 border-b-2 border-transparent hover:border-accent transition font-medium">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Transparent Mobile Dropdown -->
+  <div
+    id="mobile-menu"
+    class="hidden flex-col backdrop-blur-md bg-transparent text-center text-lg py-6 space-y-4 mt-[85px] transition-all duration-500">
+    <a href="#carousel" class="block hover:text-accent transition">Home</a>
+    <a href="#Aboutus" class="block hover:text-accent transition">About Us</a>
+    <a href="#programs" class="block hover:text-accent transition">Programs</a>
+    <a href="#gallery" class="block hover:text-accent transition">Gallery</a>
+    <a href="#contact" class="block hover:text-accent transition">Contact</a>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("menu-toggle");
+    const hamburger = document.getElementById("hamburger-icon");
+    const closeIcon = document.getElementById("close-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("flex");
+      hamburger.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!toggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+        if (!mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.add("hidden");
+          mobileMenu.classList.remove("flex");
+          hamburger.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+        }
+      }
+    });
+
+    // Close when clicking a menu link
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("flex");
+        hamburger.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      });
+    });
+  });
+</script>
+
 
   <section id="carousel" class="relative w-full h-screen overflow-hidden snap-start">
     <div id="carousel-container" class="relative w-full h-full">
