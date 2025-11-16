@@ -160,7 +160,7 @@
 
   <!-- Scroll to Top Button -->
   <button id="scrollTopBtn"
-    class="hidden bg-black text-white rounded-full w-12 h-12 flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 fixed right-5 bottom-40 flex flex-col items-center space-y-3 z-50 ">
+    class="hidden flex bg-black text-white rounded-full w-12 h-12 flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 fixed right-5 bottom-40 flex flex-col items-center space-y-3 z-50 ">
     <!-- Up Arrow Icon -->
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="w-6 h-6 text-accent">
       <path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-7 7l7-7 7 7" />
@@ -349,63 +349,133 @@
 </section>
 
 
- <section id="contact" class="relative h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#f9f3e9] to-white text-black snap-start overflow-hidden">
+<section id="contact" class="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#f9f3e9] to-white text-black snap-start overflow-hidden">
   
-  <!-- Animated Transparent PNG Background -->
-  <div id="contact-bg" class="absolute inset-0 flex justify-start md:justify-center items-center">
-    <img src="dv.logopng.png" alt="Decorative Background"
-         class="w-3/4 md:w-1/2 lg:w-1/3 opacity-0 transform -translate-x-full transition-transform duration-1000 ease-out" />
+  <div class="max-w-5xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-extrabold tracking-tight text-accent mb-4">Contact Us</h2>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+      Have questions or want to reach out? Send us a message — we’ll respond promptly!
+    </p>
   </div>
 
-  <!-- Content -->
-  <div class="relative z-10 text-center reveal px-6">
-    <h1 class="text-4xl font-bold text-primary mb-4">Contact Us</h1>
-    <p class="mb-2 text-lg">📞 +91 8667450895</p>
-    <p class="mb-2 text-lg">📞 +91 8667401927</p>
-    <p class="mb-4 text-lg">📧 Devivaradhalaya2014@gmail.com</p>
-    <a href="https://instagram.com/devidance" class="text-primary font-semibold underline hover:text-accent transition">Follow us on Instagram</a>
 
-    <div class="flex flex-col items-center space-y-4 mt-8">
-      <div class="text-2xl font-semibold text-primary">Our Online Presence</div>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
-        <div>
-          <span id="yt-count" class="text-4xl text-accent font-bold">0</span>
-          <p class="text-gray-700 font-medium mt-1">YouTube Subscribers</p>
+  <div  class="relative w-full max-w-6xl flex flex-col lg:flex-row items-center justify-center">
+
+
+    <div class="relative w-[420px] h-[570px] hidden lg:block">
+      <img src="dance1.jpg" class="w-full h-full rounded-l-3xl" />
+
+     
+      <div class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2
+                  bg-white shadow-xl rounded-2xl p-6 w-80 space-y-6">
+
+        <div class="flex items-center space-x-3">
+          <div class="text-blue-600 text-2xl">📍</div>
+          <div>
+            <p class="font-semibold text-lg">Location</p>
+            <p class="text-gray-500 text-sm">Mettur</p>
+          </div>
         </div>
-        <div>
-          <span id="ig-count" class="text-4xl text-accent font-bold">0</span>
-          <p class="text-gray-700 font-medium mt-1">Instagram Followers</p>
+
+        <div class="flex items-center space-x-3">
+          <div class="text-blue-600 text-2xl">📞</div>
+          <div>
+            <p class="font-semibold text-lg">Phone</p>
+            <p class="text-gray-500 text-sm">+91 8667450895</p>
+            <p class="text-gray-500 text-sm">+91 8667401927</p>
+          </div>
         </div>
+
+        <div class="flex items-center space-x-3">
+          <div class="text-blue-600 text-2xl">⏰</div>
+          <div>
+            <p class="font-semibold text-lg">Hours</p>
+            <p class="text-gray-500 text-sm">Mon - Fri: 9am - 6pm</p>
+          </div>
+        </div>
+
       </div>
     </div>
-   <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-20 text-center">
-  
-  <!-- Hoverable YouTube Icon -->
-  <a href="https://www.youtube.com/@devibharadhalaynadanapalli2024" target="_blank" 
-     class="relative flex items-center justify-center w-12 h-12 bg-red-600 rounded-full overflow-hidden  hover:w-44 transition-all duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6 absolute left-3 top-3">
-      <path d="M23.5 6.2a2.8 2.8 0 0 0-2-2C19.2 4 12 4 12 4s-7.2 0-9.5.2a2.8 2.8 0 0 0-2 2A29.6 29.6 0 0 0 0 12a29.6 29.6 0 0 0 .5 5.8 2.8 2.8 0 0 0 2 2C4.8 20 12 20 12 20s7.2 0 9.5-.2a2.8 2.8 0 0 0 2-2 29.6 29.6 0 0 0 .5-5.8 29.6 29.6 0 0 0-.5-5.8zM9.5 15.5v-7l6 3.5-6 3.5z"/>
-    </svg>
-    <span class="opacity-0 hover:opacity-100 text-white font-medium text-sm ml-10 transition-opacity duration-300 whitespace-nowrap">
-      Visit YouTube
-    </span>
-  </a>
 
-  <!-- Hoverable Instagram Icon -->
-  <a href="https://instagram.com/devidance" target="_blank" 
-     class="relative flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-400 rounded-full overflow-hidden group hover:w-48 transition-all duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6 absolute left-3 top-3">
-      <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.25 2.75a.75.75 0 11.001 1.501A.75.75 0 0116 6.25zm-4 2a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/>
-    </svg>
-    <span class="opacity-0 hover:opacity-100 text-white font-medium text-sm ml-10 transition-opacity duration-300 whitespace-nowrap">
-      Follow on Instagram
-    </span>
-  </a>
+    <div class="bg-white shadow-xl rounded-2xl p-6 w-80 space-y-6 mb-8 lg:hidden">
 
-</div>
+      <div class="flex items-center space-x-3">
+        <div class="text-blue-600 text-2xl">📍</div>
+        <div>
+          <p class="font-semibold text-lg">Location</p>
+          <p class="text-gray-500 text-sm">Mettur</p>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <div class="text-blue-600 text-2xl">📞</div>
+        <div>
+          <p class="font-semibold text-lg">Phone</p>
+          <p class="text-gray-500 text-sm">+91 8667450895</p>
+          <p class="text-gray-500 text-sm">+91 8667401927</p>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <div class="text-blue-600 text-2xl">⏰</div>
+        <div>
+          <p class="font-semibold text-lg">Hours</p>
+          <p class="text-gray-500 text-sm">Mon - Fri: 9am - 6pm</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="bg-white shadow-xl rounded-r-3xl p-10 w-full max-w-xl relative">
+      <h2 class="text-3xl font-bold mb-6">Contact Form</h2>
+
+      <form id="whatsappForm" class="space-y-6">
+
+        <div>
+          <label class="block font-semibold mb-1">Full Name</label>
+          <input type="text" id="name" class="w-full bg-gray-100 border border-gray-200 px-4 py-3 rounded-xl" required>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Type of Dance</label>
+          <select id="danceType" class="w-full bg-gray-100 border border-gray-200 px-4 py-3 rounded-xl" required>
+            <option value="Bharatanatyam">Bharatanatyam</option>
+            <option value="Kuchipudi">Kuchipudi</option>
+            <option value="Western Dance">Western Dance</option>
+            <option value="Hip Hop">Hip Hop</option>
+            <option value="Classical Dance">Classical Dance</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Comment or Message</label>
+          <textarea id="message" rows="4" class="w-full bg-gray-100 border border-gray-200 px-4 py-3 rounded-xl" required></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-[#1E1E1E] text-white py-3 rounded-xl text-lg font-semibold hover:opacity-90 transition">Submit</button>
+      </form>
+    </div>
 
   </div>
+
 </section>
+
+<script>
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById('name').value;
+  let danceType = document.getElementById('danceType').value;
+  let message = document.getElementById('message').value;
+
+  let phone = "919342258568";
+
+  let url = `https://wa.me/${phone}?text=Name:%20${encodeURIComponent(name)}%0ADance%20Type:%20${encodeURIComponent(danceType)}%0AMessage:%20${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+});
+</script>
+
 
 
 
