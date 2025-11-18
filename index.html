@@ -117,7 +117,7 @@
           <p class="mt-6 text-xl text-gray-200 italic">Join Devi Vardhayala — where tradition meets expression.</p>
         </div>
       </div>
-      <div class="slide absolute inset-0 flex items-center justify-center text-center bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('/images/dance2.jpg');">
+      <div class="slide absolute inset-0 flex items-center justify-center text-center bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('Hero2.jpg');">
         <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
         <div class="relative z-10 px-4 fade-in animate-fade-up">
           <h1 class="text-5xl md:text-6xl font-extrabold tracking-wide">Preserving <span class="text-accent">Tradition</span></h1>
@@ -209,6 +209,40 @@
                   </svg>
   </div>
 
+   <!-- Enquiry Form Modal -->
+<div id="enquiryModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+  <div class="bg-white w-96 p-6 rounded-xl shadow-xl text-black">
+
+    <h2 class="text-xl font-bold mb-4">Course Enquiry</h2>
+
+    <!-- Hidden course -->
+    <input type="hidden" id="courseName">
+
+    <label class="block mb-2 font-semibold">Name</label>
+    <input id="name" type="text" 
+           class="w-full border rounded-md p-2 mb-4"
+           placeholder="Enter your Name">
+
+    <label class="block mb-2 font-semibold">Message</label>
+    <textarea id="message" 
+              class="w-full border rounded-md p-2 mb-4" 
+              placeholder="Enter your message"></textarea>
+
+    <!-- SEND (WhatsApp) -->
+    <button onclick="sendWhatsApp()" 
+            class="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition">
+      Send
+    </button>
+
+    <!-- BACK BUTTON -->
+    <button onclick="closeForm()" 
+            class="w-full bg-gray-300 text-black py-2 rounded-md mt-2 hover:bg-gray-400 transition">
+      Back
+    </button>
+
+  </div>
+</div>
+
   <!-- Content -->
   <div class="relative z-10 max-w-4xl text-center px-8 reveal">
     <h1 class="text-5xl font-bold text-primary mb-6 tracking-wide animate-fade-in">
@@ -227,20 +261,45 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
       <div class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-gray-800 to-black border border-accent/30 scale-up p-6 reveal">
-        <img src="/images/beginner.jpg" class="w-full h-64 object-cover rounded-xl mb-4 shadow-md" alt="">
-        <h3 class="text-2xl font-bold text-accent mb-2">Beginner’s Course</h3>
-        <p class="text-gray-300">Master the foundation — posture, mudras, and rhythm — with structured guidance.</p>
+        <img src="dance2.jpg" class="w-full h-64 object-cover rounded-xl mb-4 shadow-md" alt="">
+        <h3 class="text-2xl font-bold text-accent mb-2">Bharatanatyam</h3>
+        <p class="text-gray-300">A classical South Indian dance form that blends expressive storytelling with intricate footwork. Students learn grace, rhythm, and cultural depth through traditional techniques.</p> <br>
+        <button onclick="openForm('Bharatanatyam')" class="px-6 py-2 bg-yellow-500 text-white rounded-md 
+               hover:bg-yellow-600 transition">
+  Enquiry
+</button>
+
       </div>
       <div class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-gray-800 to-black border border-accent/30 scale-up p-6 reveal">
         <img src="/images/intermediate.jpg" class="w-full h-64 object-cover rounded-xl mb-4 shadow-md" alt="">
-        <h3 class="text-2xl font-bold text-accent mb-2">Intermediate Batch</h3>
-        <p class="text-gray-300">Refine adavus, improve precision, and explore expressive storytelling.</p>
+        <h3 class="text-2xl font-bold text-accent mb-2">Violin</h3>
+        <p class="text-gray-300">A beautiful string program designed to build strong musical foundations. Students develop technique, melody expression, and performance confidence.
+</p>
+       <button onclick="openForm('Violin')" class="px-6 py-2 bg-yellow-500 text-white rounded-md 
+               hover:bg-yellow-600 transition">
+  Enquiry
+</button>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-gray-800 to-black border border-accent/30 scale-up p-6 reveal">
         <img src="/images/performance.jpg" class="w-full h-64 object-cover rounded-xl mb-4 shadow-md" alt="">
-        <h3 class="text-2xl font-bold text-accent mb-2">Stage Performances</h3>
-        <p class="text-gray-300">Perform in events and express your talent through live cultural showcases.</p>
+        <h3 class="text-2xl font-bold text-accent mb-2">Veenai</h3>
+        <p class="text-gray-300">Learn the timeless art of playing the veena, one of India’s oldest string instruments. This course nurtures precision, melody, and devotion through traditional practice.</p>
+        <button onclick="openForm('Veenai')" class="px-6 py-2 bg-yellow-500 text-white rounded-md 
+               hover:bg-yellow-600 transition">
+  Enquiry
+</button>
       </div>
+
+      <div class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-gray-800 to-black border border-accent/30 scale-up p-6 reveal">
+        <img src="/images/performance.jpg" class="w-full h-64 object-cover rounded-xl mb-4 shadow-md" alt="">
+        <h3 class="text-2xl font-bold text-accent mb-2">Vocal</h3>
+        <p class="text-gray-300">A structured vocal training program focusing on pitch, rhythm, and classical techniques. Students strengthen their voice while exploring rich musical traditions..</p>
+        <button onclick="openForm('Vocal')" class="px-6 py-2 bg-yellow-500 text-white rounded-md 
+               hover:bg-yellow-600 transition">
+  Enquiry
+</button>
+      </div>
+      
     </div>
   </section>
 

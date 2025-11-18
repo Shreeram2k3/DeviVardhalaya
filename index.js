@@ -154,3 +154,30 @@ scrollTopBtn.addEventListener("click", () => {
   );
 
   observer.observe(contactSection);
+
+  function openForm(course) {
+    document.getElementById("courseName").value = course;
+    document.getElementById("enquiryModal").classList.remove("hidden");
+    document.getElementById("enquiryModal").classList.add("flex");
+  }
+
+  function closeForm() {
+    document.getElementById("enquiryModal").classList.add("hidden");
+    document.getElementById("enquiryModal").classList.remove("flex");
+  }
+
+  function sendWhatsApp() {
+    let course = document.getElementById("courseName").value;
+    let name = document.getElementById("name").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappURL =
+      "https://wa.me/919342258568?text=" +
+      encodeURIComponent(
+        "Course: " + course + "\n" +
+        "Name: " + name + "\n" +
+        "Message: " + message
+      );
+
+    window.open(whatsappURL, "_blank");
+  }
