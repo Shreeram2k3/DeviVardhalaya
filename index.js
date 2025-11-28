@@ -181,3 +181,16 @@ scrollTopBtn.addEventListener("click", () => {
 
     window.open(whatsappURL, "_blank");
   }
+
+  document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById('name').value;
+  let danceType = document.getElementById('danceType').value;
+  let message = document.getElementById('message').value;
+
+  let phone = "919342258568";
+
+  let url = `https://wa.me/${phone}?text=Name:%20${encodeURIComponent(name)}%0ADance%20Type:%20${encodeURIComponent(danceType)}%0AMessage:%20${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+});
