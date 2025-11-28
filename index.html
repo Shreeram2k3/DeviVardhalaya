@@ -303,109 +303,58 @@
     </div>
   </section>
 
-  <section id="gallery" class="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-black py-24 px-6 text-white">
-  <div class="text-center mb-12">
+  <section id="gallery" class="py-24 px-6 text-center  bg-gradient-to-b from-[#0a0a0a] to-black">
+     <div class="text-center mb-12">
     <h1 class="text-5xl font-bold text-accent mb-3">Gallery</h1>
     <p class="text-gray-400 italic">A cinematic journey through rhythm, devotion, and art</p>
   </div>
 
-  <!-- Row 1: Featured Performances -->
-  <div class="mb-14">
-    <h2 class="text-2xl font-semibold mb-4 text-accent">Featured Performances</h2>
-    <div class="relative group">
-      <div id="row1" class="flex space-x-6 overflow-x-auto scroll-smooth scrollbar-hide ">
-        
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 1">
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 2">
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 3">
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 4">
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 1">
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 2">
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 3">
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 4">
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 1">
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 2">
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 3">
-        <img src="Hero1.jpg" class="gallery-item w-80 h-48 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Performance 4">
+    <!-- Row 1: Left → Right -->
+    <div class="overflow-hidden my-12">
+      <div class="flex gap-8 animate-marquee-left">
+        <!-- Original set -->
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+
+        <!-- Duplicated set for seamless loop -->
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
       </div>
-     <button onclick="scrollRow('row1', 'prev')" 
-  class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
-  ❮
-</button>
-
-<button onclick="scrollRow('row1', 'next')" 
-  class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
-  ❯
-</button>
     </div>
-  </div>
 
-  <!-- Row 2: Cultural Workshops -->
-  <div class="mb-14">
-    <h2 class="text-2xl font-semibold mb-4 text-accent">Cultural Workshops</h2>
-    <div class="relative group">
-      <div id="row2" class="flex space-x-6 overflow-x-auto scroll-smooth scrollbar-hide">
-        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Workshop 1">
-        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Workshop 2">
-        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Workshop 3">
-        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Workshop 4">
+    <!-- Row 2: Right → Left (opposite direction) -->
+    <div class="overflow-hidden my-12">
+      <div class="flex gap-8 animate-marquee-right">
+        <img src="https://images.unsplash.com/photo-1567098260939-5d46cee0556f?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1605721911519-3d64dc5fb7de?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1604019654396-1e9b3838af08?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1552083948-9252606523e3?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+
+        <!-- Duplicate for seamless loop -->
+        <img src="https://images.unsplash.com/photo-1567098260939-5d46cee0556f?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1605721911519-3d64dc5fb7de?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1604019654396-1e9b3838af08?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1552083948-9252606523e3?q=80&w=2070" class="w-96 h-96 object-cover rounded-xl shadow-2xl flex-shrink-0 hover:scale-105 transition-transform duration-500">
       </div>
-      <button onclick="scrollRow('row1', 'prev')" 
-  class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
-  ❮
-</button>
-
-<button onclick="scrollRow('row1', 'next')" 
-  class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
-  ❯
-</button>
     </div>
+
+    <!-- View More Button -->
+  <div class="text-center mt-12">
+    <a href="gallery.html" 
+       class="inline-block px-8 py-3 border border-accent text-accent rounded-full hover:bg-accent hover:text-black transition">
+      View Full Gallery →
+    </a>
   </div>
+  </section>
 
-  <!-- Row 3: Student Highlights -->
-  <div class="mb-14">
-    <h2 class="text-2xl font-semibold mb-4 text-accent">Student Highlights</h2>
-    <div class="relative group">
-      <div id="row3" class="flex space-x-6 overflow-x-auto scroll-smooth scrollbar-hide">
-        <img src="Hero1.jpg" class="gallery-item w-64 h-40 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Student 1">
-        <img src="Hero1.jpg" class="gallery-item w-64 h-40 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Student 2">
-        <img src="Hero1.jpg" class="gallery-item w-64 h-40 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Student 3">
-        <img src="Hero1.jpg" class="gallery-item w-64 h-40 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Student 4">
-      </div>
-      <button onclick="scrollRow('row1', 'prev')" 
-  class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
-  ❮
-</button>
-
-<button onclick="scrollRow('row1', 'next')" 
-  class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
-  ❯
-</button>
-    </div>
-  </div>
-
-  <!-- Row 4: Behind The Scenes -->
-  <div>
-    <h2 class="text-2xl font-semibold mb-4 text-accent">Behind The Scenes</h2>
-    <div class="relative group">
-      <div id="row4" class="flex space-x-6 overflow-x-auto scroll-smooth scrollbar-hide">
-        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Behind 1">
-        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Behind 2">
-        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Behind 3">
-        <img src="Hero1.jpg" class="gallery-item w-72 h-44 object-cover rounded-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(231,194,125,0.5)] transition-transform duration-500 ease-in-out" alt="Behind 4">
-      </div>
-      <button onclick="scrollRow('row1', 'prev')" 
-  class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
-  ❮
-</button>
-
-<button onclick="scrollRow('row1', 'next')" 
-  class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-accent text-white hover:text-black p-3 rounded-full transition duration-500 opacity-0 group-hover:opacity-100">
-  ❯
-</button>
-    </div>
-  </div>
-</section>
 
 
 <section id="contact" class="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#f9f3e9] to-white text-black snap-start overflow-hidden">
@@ -509,20 +458,7 @@
   </div>
 </section>
 
-<script>
-document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-  e.preventDefault();
 
-  let name = document.getElementById('name').value;
-  let danceType = document.getElementById('danceType').value;
-  let message = document.getElementById('message').value;
-
-  let phone = "919342258568";
-
-  let url = `https://wa.me/${phone}?text=Name:%20${encodeURIComponent(name)}%0ADance%20Type:%20${encodeURIComponent(danceType)}%0AMessage:%20${encodeURIComponent(message)}`;
-  window.open(url, '_blank');
-});
-</script>
 
 
 
