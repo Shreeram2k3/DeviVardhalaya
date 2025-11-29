@@ -189,7 +189,7 @@ scrollTopBtn.addEventListener("click", () => {
   let danceType = document.getElementById('danceType').value;
   let message = document.getElementById('message').value;
 
-  let phone = "919342258568";
+  let phone = "918667450895";
 
   let url = `https://wa.me/${phone}?text=Name:%20${encodeURIComponent(name)}%0ADance%20Type:%20${encodeURIComponent(danceType)}%0AMessage:%20${encodeURIComponent(message)}`;
   window.open(url, '_blank');
