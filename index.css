@@ -24,10 +24,10 @@ html { scroll-behavior: smooth; }
   .w-max { width: max-content; }
 
     .marquee-left {
-      animation: marqueeLeft 35s linear infinite;
+      animation: marqueeLeft 40s linear infinite;
     }
     .marquee-right {
-      animation: marqueeRight 35s linear infinite;
+      animation: marqueeRight 40s linear infinite;
     }
 
     /* Super fast on mobile */
