@@ -18,17 +18,58 @@ html { scroll-behavior: smooth; }
   animation: float 8s ease-in-out infinite;
 }
 
-@keyframes marquee-left {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
+/* gallery marquee  animations */
+@layer utilities {
+
+  .w-max { width: max-content; }
+
+    .marquee-left {
+      animation: marqueeLeft 35s linear infinite;
     }
-    @keyframes marquee-right {
-      from { transform: translateX(-50%); }
-      to   { transform: translateX(0); }
+    .marquee-right {
+      animation: marqueeRight 35s linear infinite;
     }
-    .animate-marquee-left {
-      animation: marquee-left 40s linear infinite;
+
+    /* Super fast on mobile */
+    @media (max-width: 768px) {
+      .marquee-left, .marquee-right {
+        animation-duration: 35s !important;
+      }
     }
-    .animate-marquee-right {
-      animation: marquee-right 40s linear infinite;
+
+    @keyframes marqueeLeft {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
+    @keyframes marqueeRight {
+      0%   { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Desktop hover: pause + floating effect */
+    @media (hover: hover) and (pointer: fine) {
+      
+      .group:hover > div {
+        transform: translateY(-8px) scale(1.1);
+        transition: transform 0.4s ease;
+      }
+    }
+
+    /* Smooth swipe + snap on mobile */
+    @media (max-width: 768px) {
+      .overflow-x-auto {
+        -webkit-overflow-scrolling: touch;
+      }
+      .overflow-x-auto > div {
+        scroll-snap-type: x mandatory;
+      }
+      .overflow-x-auto img {
+        scroll-snap-align: center;
+      }
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-left, .marquee-right { animation: none; }
+    }
+  }
