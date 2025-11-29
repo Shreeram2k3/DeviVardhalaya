@@ -110,13 +110,21 @@
 
   <section id="carousel" class="relative w-full h-screen overflow-hidden snap-start">
     <div id="carousel-container" class="relative w-full h-full">
-      <div class="slide absolute inset-0 flex items-center justify-center text-center bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('assets/Hero1.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
-        <div class="relative z-10 px-4 fade-in animate-bounce-in">
-          <h1 class="text-5xl md:text-6xl font-extrabold tracking-wide">Embrace the <span class="text-accent">Grace</span> of Bharatanatyam</h1>
-          <p class="mt-6 text-xl text-gray-200 italic">Join Devi Vardhayala — where tradition meets expression.</p>
-        </div>
-      </div>
+   <div class="slide absolute inset-0 flex items-center justify-center text-center bg-cover bg-center opacity-0 transition-opacity duration-1000 
+     bg-[url('assets/mobilehero.jpg')] md:bg-[url('assets/Hero1.jpg')]">
+  
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
+  
+  <div class="relative z-10 px-4 fade-in animate-bounce-in">
+    <h1 class="text-3xl md:text-6xl font-extrabold tracking-wide">
+      Embrace the <span class="text-accent">Grace</span> of Bharatanatyam
+    </h1>
+    <p class="mt-4 md:mt-6 text-lg md:text-xl text-gray-200 italic">
+      Join Devi Vardhayala — where tradition meets expression.
+    </p>
+  </div>
+</div>
+
       <div class="slide absolute inset-0 flex items-center justify-center text-center bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('assets/Hero2.jpg');">
         <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
         <div class="relative z-10 px-4 fade-in animate-fade-up">
@@ -264,9 +272,9 @@
         <img src="assets/course1.jpg" class="w-full h-64 object-cover rounded-xl mb-4 shadow-md" alt="">
         <h3 class="text-2xl font-bold text-accent mb-2">Bharatanatyam</h3>
         <p class="text-gray-300">A classical South Indian dance form that blends expressive storytelling with intricate footwork. Students learn grace, rhythm, and cultural depth through traditional techniques.</p> <br>
-        <button onclick="openForm('Bharatanatyam')" class="px-6 py-2 bg-yellow-500 text-white rounded-md 
-               hover:bg-yellow-600 transition">
-  enquier
+        <button onclick="openForm('Bharatanatyam')" class="px-6 py-2 bg-yellow-600 text-stone-900 rounded-md 
+               hover:bg-yellow-500 transition">
+  Enquire
 </button>
 
       </div>
@@ -275,28 +283,28 @@
         <h3 class="text-2xl font-bold text-accent mb-2">Violin</h3>
         <p class="text-gray-300">A beautiful string program designed to build strong musical foundations. Students develop technique, melody expression, and performance confidence.
 </p> <br>
-       <button onclick="openForm('Violin')" class="px-6 py-2 bg-yellow-500 text-white rounded-md 
-               hover:bg-yellow-600 transition">
-  enquier
+       <button onclick="openForm('Violin')" class="px-6 py-2 bg-yellow-600 text-stone-900 rounded-md 
+               hover:bg-yellow-500 transition">
+  Enquire
 </button>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-gray-800 to-black border border-accent/30 scale-up p-6 reveal">
         <img src="assets/veenai.jpg" class="w-full h-64 object-cover rounded-xl mb-4 shadow-md" alt="">
         <h3 class="text-2xl font-bold text-accent mb-2">Veenai</h3>
         <p class="text-gray-300">Learn the timeless art of playing the veena, one of India’s oldest string instruments. This course nurtures precision, melody, and devotion through traditional practice.</p> <br>
-        <button onclick="openForm('Veenai')" class="px-6 py-2 bg-yellow-500 text-white rounded-md 
-               hover:bg-yellow-600 transition">
- enquier
+        <button onclick="openForm('Veenai')" class="px-6 py-2 bg-yellow-600 text-stone-900 rounded-md 
+               hover:bg-yellow-500 transition">
+ Enquire
 </button>
       </div>
 
       <div class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-gray-800 to-black border border-accent/30 scale-up p-6 reveal">
         <img src="assets/vocal.jpg" class="w-full h-64 object-cover rounded-xl mb-4 shadow-md" alt="">
         <h3 class="text-2xl font-bold text-accent mb-2">Vocal</h3>
-        <p class="text-gray-300">A structured vocal training program focusing on pitch, rhythm, and classical techniques. Students strengthen their voice while exploring rich musical traditions..</p>
-        <button onclick="openForm('Vocal')" class="px-6 py-2 bg-yellow-500 text-white rounded-md 
-               hover:bg-yellow-600 transition">
-  Enquiry
+        <p class="text-gray-300">A structured vocal training program focusing on pitch, rhythm, and classical techniques. Students strengthen their voice while exploring rich musical traditions..</p><br>
+        <button onclick="openForm('Vocal')" class="px-6 py-2 bg-yellow-600 text-stone-900 rounded-md 
+               hover:bg-yellow-500 transition">
+  Enquire
 </button>
       </div>
       
@@ -425,7 +433,7 @@
 
         <!-- Dance Type -->
         <div>
-          <label class="block font-semibold mb-1">Type of Dance</label>
+          <label class="block font-semibold mb-1">Type of Enquiry</label>
           <select id="danceType"
                   class="w-full bg-gray-100 border border-gray-200 px-4 py-3 rounded-xl"
                   required>
