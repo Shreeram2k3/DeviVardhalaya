@@ -172,7 +172,7 @@ scrollTopBtn.addEventListener("click", () => {
     let message = document.getElementById("message").value;
 
     let whatsappURL =
-      "https://wa.me/919342258568?text=" +
+      "https://wa.me/918667450895?text=" +
       encodeURIComponent(
         "Course: " + course + "\n" +
         "Name: " + name + "\n" +
